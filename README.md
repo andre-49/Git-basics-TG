@@ -2,9 +2,9 @@
 ## EXERCISE 1 
 andre@beBop ~/Cyphers  
 ╰─➤  mkdir git_basics 
-╭─andre@beBop ~/Cyphers  
+andre@beBop ~/Cyphers  
 ╰─➤  cd git_basics 
-╭─andre@beBop ~/Cyphers/git_basics  
+andre@beBop ~/Cyphers/git_basics  
 ╰─➤  git init         
 Initialized empty Git repository in /home/andre/Cyphers/git_basics/.git/
 andre@beBop ~/Cyphers/git_basics  ‹main› 
