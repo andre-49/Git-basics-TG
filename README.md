@@ -1,6 +1,6 @@
 # BUNDLE 1 
 ## EXERCISE 1 
-andre@beBop ~/Cyphers  
+``````andre@beBop ~/Cyphers  
 ╰─➤  mkdir git_basics 
 andre@beBop ~/Cyphers  
 ╰─➤  cd git_basics 
@@ -58,3 +58,4 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
 ╰─➤
+``````
