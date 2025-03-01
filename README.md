@@ -60,8 +60,10 @@ Your branch is up to date with 'origin/main'.
 ╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
 ╰─➤
 
+``````
 ## EXERCISE 2
 
+``````
 ╭─andre@beBop ~/Cyphers/git_basics  ‹dev› 
 ╰─➤  v home.html       
 ╭─andre@beBop ~/Cyphers/git_basics  ‹dev*› 
