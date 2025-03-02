@@ -1,5 +1,7 @@
 # BUNDLE 1 
+
 ## EXERCISE 1 
+
 ``````
 andre@beBop ~/Cyphers  
 ╰─➤  mkdir git_basics 
@@ -146,4 +148,149 @@ HEAD is now at db111c0 adding home, about files on dev
  about.html   home.html  󰂺 README.md   team.html   textFile.txt
 ╭─andre@beBop ~/Cyphers/git_basics  ‹dev*› 
 ╰─➤  rm team.html
+``````
+# BUNDLE 2
+
+## EXERCISE 1
+
+```
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git checkout -b ft/bundle-2
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  v services.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git add .
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git commit -m "Services page"
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git push -u origin ft/bundle-2
+
+```
+## EXERCISE 2
+
+```
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/bundle-2› 
+╰─➤  git switch main               
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git pull                      
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 898 bytes | 898.00 KiB/s, done.
+From github.com:andre-49/Git-basics-TG
+   d43fc64..5329d0d  main       -> origin/main
+Updating d43fc64..5329d0d
+Fast-forward
+ services.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  ls
+󰂺 README.md   services.html   textFile.txt
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git checkout -b ft/service-redesign           
+Switched to a new branch 'ft/service-redesign'
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign› 
+╰─➤  v services.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign*› 
+╰─➤  git commit -am "updating services page"
+[ft/service-redesign 6e70358] updating services page
+ 1 file changed, 1 insertion(+)
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign› 
+╰─➤  git push -u origin ft/service-redesign  
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 399 bytes | 399.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/andre-49/Git-basics-TG/pull/new/ft/service-redesign
+remote: 
+To github.com:andre-49/Git-basics-TG.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign› 
+╰─➤  git switch main                       
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  v services.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹main*› 
+╰─➤  git commit -am "updating services page on main"
+[main 2625104] updating services page on main
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git push                                       
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 402 bytes | 402.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:andre-49/Git-basics-TG.git
+   5329d0d..2625104  main -> main
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git checkout ft/service-redesign               
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign› 
+╰─➤  git diff main
+diff --git a/services.html b/services.html
+index 5e49bcf..d79b1ab 100644
+--- a/services.html
++++ b/services.html
+@@ -7,6 +7,7 @@
+         <link href="css/style.css" rel="stylesheet">
+     </head>
+     <body>
+-        <h1>Services page here!</h1> 
++        <h1>This is a services page</h1>
++    
+     </body>
+ </html>
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign› 
+╰─➤  git merge main 
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign*› 
+╰─➤  git diff main                                                                       1 ↵
+diff --git a/services.html b/services.html
+index 5e49bcf..dc07e3f 100644
+--- a/services.html
++++ b/services.html
+@@ -7,6 +7,11 @@
+         <link href="css/style.css" rel="stylesheet">
+     </head>
+     <body>
++<<<<<<< HEAD
++        <h1>This is a services page</h1>
++    
++=======
+         <h1>Services page here!</h1> 
++>>>>>>> main
+     </body>
+ </html>
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign*› 
+╰─➤  v services.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign*› 
+╰─➤  git commit -am "merging from main with conflicts"
+[ft/service-redesign 9a8ffae] merging from main with conflicts
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/service-redesign› 
+╰─➤  git push                                         
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 441 bytes | 441.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:andre-49/Git-basics-TG.git
+   6e70358..9a8ffae  ft/service-redesign -> ft/service-redesign
 ``````
