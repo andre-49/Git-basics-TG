@@ -294,3 +294,247 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To github.com:andre-49/Git-basics-TG.git
    6e70358..9a8ffae  ft/service-redesign -> ft/service-redesign
 ``````
+# BUNDLE 3
+
+## EXERCISE 1
+
+```
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git checkout -b ft/team-page                 
+Switched to a new branch 'ft/team-page'
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/team-page› 
+╰─➤  v team.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/team-page*› 
+╰─➤  git add .                   
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/team-page*› 
+╰─➤  git commit -m "Team page on ft/team-page"
+[ft/team-page 5c266e7] Team page on ft/team-page
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/team-page› 
+╰─➤  git push -u origin ft/team-page          
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 472 bytes | 472.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/andre-49/Git-basics-TG/pull/new/ft/team-page
+remote: 
+To github.com:andre-49/Git-basics-TG.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/team-page› 
+╰─➤  git branch                     
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* ft/team-page
+  main
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/team-page› 
+╰─➤  git switch main                          
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git checkout -b ft/contact-page          
+Switched to a new branch 'ft/contact-page'
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/contact-page› 
+╰─➤  git switch ft/team-page        
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/team-page› 
+╰─➤  git log                
+commit 5c266e7ac4fb6ad623ae705b0ddeca11b359b2f8 (HEAD -> ft/t
+eam-page, origin/ft/team-page)
+Author: andre <andy49miguel@gmail.com>
+Date:   Sun Mar 2 10:13:13 2025 +0200
+
+    Team page on ft/team-page
+
+commit 7710010cdab3b918be38582938dbc6d971935589 (origin/main, 
+origin/HEAD, main, ft/contact-page)
+Author: andre <andy49miguel@gmail.com>
+Date:   Sun Mar 2 10:05:21 2025 +0200
+
+    readme update after bundle 2
+
+commit 262510424fe2c5d244c5b826ca676689f06482a4
+Author: andre <andy49miguel@gmail.com>
+Date:   Sun Mar 2 09:47:38 2025 +0200
+
+    updating services page on main
+
+commit 5329d0d60ff792139509ff4e42acfafd77d1e25d
+Merge: d43fc64 6f53fa0
+Author: Andy Miguel Songa <andy49miguel@gmail.com>
+Date:   Sun Mar 2 09:35:03 2025 +0200
+
+    Merge pull request #1 from andre-49/ft/bundle-2
+    
+    Services page
+
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/team-page› 
+╰─➤  git switch ft/contact-page 
+Switched to branch 'ft/contact-page'
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/contact-page› 
+╰─➤  git cherry-pick 
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/contact-page› 
+╰─➤  git cherry-pick 5c266e7ac4fb6ad623ae705b0ddeca11b359b2f8                          130 ↵
+[ft/contact-page 8a76788] Team page on ft/team-page
+ Date: Sun Mar 2 10:13:13 2025 +0200
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/contact-page› 
+╰─➤  ls
+󰂺 README.md   services.html   team.html   textFile.txt
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/contact-page› 
+╰─➤  v contact.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/contact-page*› 
+╰─➤  git add .                                               
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/contact-page*› 
+╰─➤  git commit -m "Contact page"                            
+[ft/contact-page 514c8a4] Contact page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 contact.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/contact-page› 
+╰─➤  git push -u origin ft/contact-page 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 825 bytes | 825.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/andre-49/Git-basics-TG/pull/new/ft/contact-page
+remote: 
+To github.com:andre-49/Git-basics-TG.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/contact-page› 
+╰─➤  git checkout -b ft/faq-page                             
+Switched to a new branch 'ft/faq-page'
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/faq-page› 
+╰─➤  v faq.html    
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/faq-page*› 
+╰─➤  git add .                  
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/faq-page*› 
+╰─➤  git commit -m "Faq page"          
+[ft/faq-page aacc2c9] Faq page
+ 1 file changed, 1 insertion(+)
+ create mode 100644 faq.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/faq-page› 
+╰─➤  git push -u origin ft/faq-page    
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/andre-49/Git-basics-TG/pull/new/ft/faq-page
+remote: 
+To github.com:andre-49/Git-basics-TG.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/faq-page› 
+╰─➤  git revert5 c266e7ac4fb6ad623ae705b0ddeca11b359b2f8 
+git: 'revert5' is not a git command. See 'git --help'.
+
+The most similar command is
+	revert
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/faq-page› 
+╰─➤  git revert 5c266e7ac4fb6ad623ae705b0ddeca11b359b2f8                                 1 ↵
+[ft/faq-page 9385288] Revert "Team page on ft/team-page"
+ 1 file changed, 13 deletions(-)
+ delete mode 100644 team.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/faq-page› 
+╰─➤  ls
+ contact.html   faq.html  󰂺 README.md   services.html   textFile.txt
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/faq-page› 
+╰─➤  git push                      
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 281 bytes | 281.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:andre-49/Git-basics-TG.git
+   aacc2c9..9385288  ft/faq-page -> ft/faq-page
+```
+
+## EXERCISE 2
+
+```
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/faq-page› 
+╰─➤  git checkout -b ft/home-page-redesign   
+Switched to a new branch 'ft/home-page-redesign'
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/home-page-redesign› 
+╰─➤  git switch main                      
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  v home.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹main*› 
+╰─➤  git commit -am "home page on main"           
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	home.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+╭─andre@beBop ~/Cyphers/git_basics  ‹main*› 
+╰─➤  git add .                                                                           1 ↵
+╭─andre@beBop ~/Cyphers/git_basics  ‹main*› 
+╰─➤  git commit -am "home page on main"
+[main 8f6b31f] home page on main
+ 1 file changed, 12 insertions(+)
+ create mode 100644 home.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git push                          
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 523 bytes | 523.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:andre-49/Git-basics-TG.git
+   7710010..8f6b31f  main -> main
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git switch ft/home-page-redesign 
+Switched to branch 'ft/home-page-redesign'
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/home-page-redesign› 
+╰─➤  git rebase main                 
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/home-page-redesign› 
+╰─➤  v home.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/home-page-redesign*› 
+╰─➤  git commit -am "home page update" 
+[ft/home-page-redesign 0136fc8] home page update
+ 1 file changed, 1 insertion(+)
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/home-page-redesign› 
+╰─➤  git push -u origin ft/home-page-redesign 
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (14/14), 1.59 KiB | 812.00 KiB/s, done.
+Total 14 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), done.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/andre-49/Git-basics-TG/pull/new/ft/home-page-redesign
+remote: 
+To github.com:andre-49/Git-basics-TG.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+```
