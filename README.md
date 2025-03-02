@@ -538,3 +538,123 @@ To github.com:andre-49/Git-basics-TG.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ```
+
+# BUNDLE 4
+
+## EXERCISE 1
+
+```
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git remote add git-copy git@github.com:andre-49/Bundle-4.git   
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git remote                                                  
+git-copy
+origin
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  v home.html 
+╭─andre@beBop ~/Cyphers/git_basics  ‹main*› 
+╰─➤  git commit -am "updated home page"             
+[main ff7b0c1] updated home page
+ 1 file changed, 1 insertion(+)
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git push -u git-copy main                      
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (40/40), done.
+Writing objects: 100% (42/42), 8.00 KiB | 4.00 MiB/s, done.
+Total 42 (delta 16), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (16/16), done.
+To github.com:andre-49/Bundle-4.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'git-copy/main'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git push                 
+Everything up-to-date
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git push origin main     
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 331 bytes | 331.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:andre-49/Git-basics-TG.git
+   c74faf5..ff7b0c1  main -> main
+```
+
+## EXERCISE 2
+
+```
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git checkout -b ft/footer            
+Switched to a new branch 'ft/footer'
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/footer› 
+╰─➤  v footer.html 
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/footer*› 
+╰─➤  git add .                
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/footer*› 
+╰─➤  git commit -m "Footer"            
+[ft/footer 12a22ab] Footer
+ 1 file changed, 15 insertions(+)
+ create mode 100644 footer.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/footer› 
+╰─➤  v footer.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/footer*› 
+╰─➤  git commit -am "updated footer"   
+[ft/footer cec0162] updated footer
+ 1 file changed, 1 insertion(+)
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/footer› 
+╰─➤  git push -u origin ft/footer            
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 704 bytes | 704.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/andre-49/Git-basics-TG/pull/new/ft/footer
+remote: 
+To github.com:andre-49/Git-basics-TG.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/footer› 
+╰─➤  git switch main             
+Switched to branch 'main'
+Your branch is up to date with 'git-copy/main'.
+╭─andre@beBop ~/Cyphers/git_basics  ‹main› 
+╰─➤  git checkout -b ft/squashing       
+Switched to a new branch 'ft/squashing'
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/squashing› 
+╰─➤  git merge --squash ft/footer
+Updating ff7b0c1..cec0162
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+ create mode 100644 footer.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/squashing*› 
+╰─➤  git commit -m "footer changes squashing"
+[ft/squashing f1ca8d9] footer changes squashing
+ 1 file changed, 16 insertions(+)
+ create mode 100644 footer.html
+╭─andre@beBop ~/Cyphers/git_basics  ‹ft/squashing› 
+╰─➤  git push -u origin ft/squashing         
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 469 bytes | 469.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/andre-49/Git-basics-TG/pull/new/ft/squashing
+remote: 
+To github.com:andre-49/Git-basics-TG.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+```
